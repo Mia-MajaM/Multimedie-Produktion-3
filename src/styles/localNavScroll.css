@@ -1,0 +1,99 @@
+/* *************** Til den lokale nav **************** */
+.gridDifferentColumnsInfo {
+ display: grid;
+ grid-template-columns: 30vw 40vw;
+ justify-items: center;
+ margin-top: 4rem;
+}
+
+.buttonsSection {
+ display: flex;
+ flex-direction: column;
+ margin: 0rem 5rem;
+ border: 2px solid var(--bordeaux);
+ border-radius: 10px;
+ width: fit-content;
+ height: fit-content;
+}
+
+.buttonsSection>button {
+ padding: 1rem;
+ min-width: 15vw;
+ text-align: left;
+ background: none;
+ border: none;
+ border-bottom: 2px solid var(--bordeaux);
+ font-size: 1.1rem;
+ color: var(--bordeaux);
+ cursor: pointer;
+}
+
+.buttonFirst {
+ border-radius: 5% 5% 0% 0%;
+}
+
+.buttonLast {
+ border-bottom: none;
+ border-radius: 0% 0% 5% 5%;
+}
+
+.buttonsSection>button:hover,
+.buttonsSection>.btnActive {
+ background: var(--bordeaux);
+ color: var(--hvid);
+}
+
+@media only screen and (max-width: 391px) {
+ .gridDifferentColumnsInfo {
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-top: 2rem;
+ }
+
+ .buttonsSection {
+  display: block;
+  margin: 0px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100vw;
+  margin: 0rem;
+  margin-left: 2.1rem;
+  border-right: none;
+  border-radius: 10px 0px 0px 10px;
+ }
+}
+
+/* Til content */
+
+.imgContent {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+ filter: opacity(75%);
+}
+
+.imgBackground {
+ background: var(--mørkeOrange);
+ height: 300px;
+ overflow: hidden;
+}
+
+@media only screen and (max-width: 391px) {
+ .toggleContent {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+ }
+
+ .toggleContent>section>ul {
+  margin-left: 1rem;
+ }
+
+ .imgBackground {
+  margin-top: 2rem;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 0px;
+ }
+}

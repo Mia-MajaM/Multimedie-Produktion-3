@@ -1,0 +1,45 @@
+/**************** Til toggle knapperne  *****************/
+.toggleBtnPlacement {
+ position: relative;
+ display: flex;
+ justify-content: center;
+}
+
+.toggleButtons {
+ width: fit-content;
+ border-radius: 50px;
+ border: 2px solid var(--bordeaux);
+ margin-top: 2rem;
+}
+
+.toggleButtons>button {
+ padding: 1rem 0.5rem;
+ width: 9vw;
+ text-align: center;
+ background: var(--graa);
+ border: none;
+ font-size: 1.3rem;
+ color: var(--mørkeOrange);
+ cursor: pointer;
+}
+
+.toggleButtonLeft {
+ border-radius: 50px 0px 0px 50px;
+}
+
+.toggleButtonRight {
+ border-radius: 0px 50px 50px 0px;
+}
+
+.toggleButtons>.toggleActive {
+ background: var(--bordeaux);
+ color: var(--hvid);
+ box-shadow: inset 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 391px) {
+ .toggleButtons>button {
+  width: 30vw;
+  font-size: 1rem;
+ }
+}

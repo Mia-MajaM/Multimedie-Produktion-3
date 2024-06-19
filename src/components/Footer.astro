@@ -1,0 +1,131 @@
+---
+---
+
+<footer>
+ <section class="center">
+<h2 class="desktopVersion">Kontakt</h2>
+  <img class="logo mobileVersion" src="../../kjoelbye-psykoterapi-weblogo.jpg">
+<section class="footerFlex">
+<div>
+ <p>Anne-Kirstine Kiil Kjølbye</p>
+ <a href="tel:+4522465113"> <i class="fa-solid fa-phone"></i> 22 46 51 13</a>
+<a href="mailto:ak@kjolbyepsykoterapi.dk">ak@kjolbyepsykoterapi.dk</a>
+</div>
+
+<div>
+ <p>Katharina Kjølbye Wrist</p>
+ <a href="tel:+4520708413"> <i class="fa-solid fa-phone"></i> 20 70 84 13</a>
+<a href="mailto:kk@kjolbyepsykoterapi.dk">kk@kjolbyepsykoterapi.dk</a>
+</div>
+
+<div>
+ <p>Morten Kjølbye</p>
+ <a href="tel:+4528961244"> <i class="fa-solid fa-phone"></i> 28 96 12 44</a>
+<a href="mailto:mk@kjolbyepsykoterapi.dk">mk@kjolbyepsykoterapi.dk</a>
+</div>
+</section>
+
+<div class="adresse">
+ <p>Adresse</p>
+ <p>Åstrupvj 10, 8. sal. 9800 Hjørring</p>
+ <a target="blank" href="https://www.google.dk/maps/place/%C3%85strupvej+10,+9800+Hj%C3%B8rring/@57.4553579,9.9762351,17z/data=!3m1!4b1!4m6!3m5!1s0x4648ce6ce5b985dd:0xc0751728b16292da!8m2!3d57.4553579!4d9.9762351!16s%2Fg%2F11bw3xkn_j?entry=ttu">Find Vej</a>
+</div>
+</section>
+
+ <small>
+  Copyright &copy; <span id="copyright"></span> - 
+  <a href="/cookiesprivatliv"> Cookie- og Privatlivspolitik</a>
+ </small>
+</footer>
+
+<!-- Laver javascript client side -->
+<script>
+ // Indsætter vores nuværende år automatisk i span med id copyright
+document.querySelector("#copyright").textContent = new Date()
+.getFullYear()
+.toString();
+</script>
+
+<style>
+ footer{
+  border-top: 3px solid var(--mørkeBlå);
+  margin-top: 5rem ;
+ }
+ .center{
+  text-align: center;
+ }
+ .footerFlex{
+  display: flex;
+  margin: 1rem;
+ }
+
+ div{
+  width: 33vw;
+  display: flex;
+  flex-direction: column;
+ }
+
+ a{
+	color: var(--mørkeBlå);
+	text-decoration: none;
+	font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+	}
+
+	a:hover{
+		color: var(--bordeaux);
+	}
+ p{
+  font-weight: 500;
+ }
+ small{
+  margin-left: 3rem;
+ }
+
+ small>a{
+ font-size: 13px;
+ }
+ 
+ i{
+  color: var(--mørkeBlå);
+ }
+ .adresse{
+  margin:auto;
+ }
+
+ .adresse>a{
+  text-decoration: underline;
+ }
+ .logo{
+    height: 60px;
+  }
+ 
+@media only screen and (max-width: 391px) {
+ .center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .footerFlex{
+  flex-direction: column;
+  align-items: center;
+ }
+ footer{
+  text-align: center;
+ }
+ a, p{
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 0rem;
+ }
+ div{
+  width: 90vw;
+  margin-top: 1rem;
+ }
+ small{
+  margin-left: 0rem;
+ }
+}
+ </style>

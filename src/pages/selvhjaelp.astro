@@ -1,0 +1,22 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro";
+import FocusPointsComp from "../components/FocusPointsComp.vue";
+
+import Toggle from "../components/Selvhjaelp/ToggleKlientPaaroendeComp.vue";
+
+// Import af style til local navigation
+import "../styles/localNavScroll.css"
+import "../styles/toggleButtons.css"
+---
+
+
+<HeadLayout title="Kjølbye Psykoterapi - Selvhjælp" description="Få støtte og selvhjælp hos Kjølbye Psykoterapi. Udforsk værdifulde redskaber og vejledning til pårørende og klienter. Tag det første skridt mod trivsel i dag">
+	<section>
+		<Toggle client:load/>
+		<FocusPointsComp client:visible/>
+	</section>
+</HeadLayout>
+
+<style>
+	
+</style>

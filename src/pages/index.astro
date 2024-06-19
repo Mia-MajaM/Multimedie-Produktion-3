@@ -1,0 +1,134 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro"
+import MainSliderComp from "../components/Forside/MainSliderComp.vue";
+import SporgeskemaButtonComp from "../components/Forside/SporgeskemaButtonComp.vue";
+import BookNuButtonComp from "../components/Forside/BookNuButtonComp.vue";
+import FocusPointsComp from "../components/FocusPointsComp.vue";
+---
+
+
+<HeadLayout>
+<MainSliderComp/>
+
+<section class="velkommen">
+	<h1>Velkommen til Kjølbye Psykoterapi</h1>
+	<p>hvor vi er dedikerede til at hjælpe dig med at tackle de udfordringer, der præger din hverdag, eller skabe de forandringer, du længes efter for en mere givende tilværelse. </p>
+<p>Lær os at <a href="/omos">kende her</a> </p>
+</section>
+
+<section class="hjerneSektionHøjre">
+	<img class="desktopVersion" src="../../HjerneRødHøjre.png" alt="Billede af en højre hjernehalvdel">
+	<section class="forsideContentSection">
+		<article>
+			<h1> Er du i tvivl?</h1>
+			<p class="SporgeskemaIntro">Udfyld dette spørgeskema og få svar </p>
+				<SporgeskemaButtonComp client:load/>
+			<p>Vores skræddersyede spørgeskema er designet til at hjælpe dig med at identificere de udfordringer eller problematikker, du står over for. Ved at besvare disse spørgsmål får vi en bedre forståelse af dine behov og kan anbefale det mest egnede forløb for dig.Er du i tvilv om hvad forskellen på en psykoterapeut og en psykolog, kan du læse den <a href="/information">information her.</a></p>
+		</article>
+
+		<article>
+			<h2>Hvad er psykoterapi?</h2>
+			<p> Kort sagt er psykoterapi en form for behandling, hvor en terapeut arbejder med klienten for at løse psykologiske udfordringer og fremme personlig udvikling gennem samtaler og terapeutiske metoder. Læs om vores <a href="/vitilbyder"> forløb her </a></p>
+		</article>
+	</section>
+	</section>
+		
+	<section class="hjerneSektionVenstre">
+		<section class="forsideContentSection">
+		<article>
+			<h1>Ventetider</h1>
+			<p>Få hurtig adgang til psykoterapi med vores korte ventetider, få en tid allerede indenfor 1-2 uger og start din rejse mod trivsel og balance. </p>
+		 <BookNuButtonComp/>
+		</article>
+		<article>
+		 <h2>Pårørende</h2>
+		 <p>Er du pårørende til en der kæmper med mentale udfordringer som angst, depression, selvskade, stress og lavt selvværd, kan du læse lidt om hvordan du kan hjælpe som <a href="/selvhjaelp">pårørende her.</a></p>
+	 </article>
+ </section>
+	<img class="desktopVersion" src="../../HjerneBlåVenstre.png" alt="Billede af en venstre hjernehalvdel">
+</section>
+</section>
+<FocusPointsComp client:load/>
+</HeadLayout>
+
+<style>
+	.velkommen{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	a{
+		color: var(--mørkeBlå);
+		text-decoration: none;
+		font-weight: 500;
+	}
+	a:hover{
+		color: var(--bordeaux);
+	}
+	.hjerneSektionHøjre{
+		display: grid;
+		grid-template-columns: 30vw 50vw;
+		justify-items: center;
+		margin: 0rem 8rem;
+	}
+	.hjerneSektionVenstre{
+		display: grid;
+		grid-template-columns: 50vw 30vw;
+		justify-items: center;
+		margin: 2rem 8rem;
+	}
+	img{
+		height: 600px;
+	}
+	.forsideContentSection{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hjerneSektionHøjre>.forsideContentSection{
+		padding-right: 5rem;
+	}
+	.hjerneSektionVenstre>.forsideContentSection{
+		padding-left: 5rem;
+	}
+
+	h1{
+		text-align: center;
+		padding-top: 1rem;
+	}
+
+	.SporgeskemaIntro{
+	color: var(--mørkeOrange);
+	text-align: center;
+}
+
+@media only screen and (max-width: 391px) {
+	.velkommen{
+		padding: 0rem 2rem;
+	}
+.forsideTopSection{
+	grid-template-columns: 1fr;
+}
+.hjerneSektionHøjre>.forsideContentSection{
+		padding-right: 0rem;
+	}
+	.hjerneSektionVenstre>.forsideContentSection{
+		padding-left: 0rem;
+	}
+	.hjerneSektionHøjre{
+		grid-template-columns: 1fr;
+		margin: 0rem 2rem;
+	}
+	.hjerneSektionVenstre{
+		grid-template-columns: 1fr;
+		margin: 0rem 2rem;
+	}
+	h2{
+		text-align: center;
+		padding-top: 1rem;
+	}
+
+}
+</style>
+

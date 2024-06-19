@@ -1,0 +1,27 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro";
+import FocusPointsComp from "../components/FocusPointsComp.vue";
+
+import Toggle from "../components/ViTilbyder/ToggleForlobProfComp.vue";
+
+
+// Import af style til local navigation og content
+import "../styles/localNavOverlay.css"
+import "../styles/toggleButtons.css"
+---
+
+
+<HeadLayout 
+title="Kjølbye Psykoterapi - Vi Tilbyder" 
+description="Kjølbye Psykoterapi tilbyder egenterapi og gruppeterapi - Egenterapi til psykoterapeuter og i forbindelse med gennemførsel af psykoterapiuddannelsen.">
+	<section>
+		<Toggle client:load/>
+			<FocusPointsComp client:visible/>
+	</section>
+</HeadLayout>
+
+<style>
+</style>
+
+
+

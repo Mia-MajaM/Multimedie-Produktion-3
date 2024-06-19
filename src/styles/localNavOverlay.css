@@ -1,0 +1,199 @@
+/**************** Til den lokale nav  *****************/
+.gridDifferentColumnsInfo {
+ display: grid;
+ grid-template-columns: 30vw 40vw;
+ justify-items: center;
+ margin-top: 4rem;
+}
+
+.buttonsSection {
+ display: flex;
+ flex-direction: column;
+ margin: 0rem 5rem;
+ border: 2px solid var(--bordeaux);
+ border-radius: 10px;
+ width: fit-content;
+ height: fit-content;
+}
+
+.buttonsSection>button {
+ padding: 1rem;
+ width: 15vw;
+ text-align: left;
+ background: none;
+ border: none;
+ border-bottom: 2px solid var(--bordeaux);
+ font-size: 1.1rem;
+ color: var(--bordeaux);
+ cursor: pointer;
+}
+
+.buttonFirst {
+ border-radius: 5% 5% 0% 0%;
+}
+
+.buttonLast {
+ border-bottom: none;
+ border-radius: 0% 0% 5% 5%;
+}
+
+.buttonsSection>button:hover,
+.buttonsSection>.btnActive {
+ background: var(--bordeaux);
+ color: var(--hvid);
+}
+
+@media only screen and (max-width: 391px) {
+ .gridDifferentColumnsInfo {
+  grid-template-columns: 1fr;
+  justify-content: center;
+  margin-top: 2rem;
+ }
+
+ .buttonsSection {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 5rem;
+  border: none;
+ }
+
+ .buttonsSection>button {
+  padding: 1rem;
+  margin: 1rem;
+  width: 60vw;
+  text-align: center;
+  border: 2px solid var(--bordeaux);
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--mørkeBlå);
+ }
+
+ .buttonsSection>button:hover,
+ .buttonsSection>.btnActive {
+  background: var(--hvid);
+  color: var(--bordeaux);
+ }
+}
+
+/* Til content */
+
+.imgContent {
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: center;
+ filter: opacity(75%);
+}
+
+.imgBackground {
+ background: var(--mørkeOrange);
+ height: 300px;
+ overflow: hidden;
+}
+
+.closeButton {
+ display: none;
+}
+
+/* til om os sektion */
+.buttonSectionOm {
+ display: flex;
+ justify-content: center;
+}
+
+.buttonSectionOm>button>a {
+ all: unset;
+}
+
+.buttonSectionOm>button {
+ padding: 1rem;
+ margin: 2rem 4rem;
+ width: 10vw;
+ text-align: center;
+ font-size: 1.3rem;
+ background: var(--bordeaux);
+ color: var(--hvid);
+ border-radius: 40px;
+ cursor: pointer;
+}
+
+.buttonSectionOm>button:hover {
+ background: var(--hvid);
+ color: var(--bordeaux);
+ font-weight: 600;
+}
+
+.imgBackgroundOm {
+ display: none;
+}
+
+@media only screen and (max-width: 391px) {
+ .toggleContent {
+  display: none;
+ }
+
+ .toggleContentContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 50;
+  width: 85vw;
+  margin: 0rem 2rem;
+  background: var(--hvid);
+  border-width: 2px 4px;
+  border-style: solid;
+  border-color: var(--bordeaux);
+  box-shadow: 0rem 0rem 0.2rem var(--mørkeBlå);
+  border-radius: 50px;
+ }
+
+ .PopUpContent {
+  margin: 0rem 2rem;
+ }
+
+ .toggleContentContainer>h1 {
+  margin-top: 0;
+ }
+
+ .closeButton {
+  display: block;
+  position: absolute;
+  z-index: 6;
+  padding-top: 1rem;
+  margin: 0rem 2rem 1rem 2rem;
+  width: 69vw;
+  text-align: right;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--hvid);
+ }
+
+ .imgBackground {
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50px 50px 0px 0px;
+ }
+
+ .imgContentOm {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+ }
+
+ .imgBackgroundOm {
+  display: block;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px 50px 0px 0px;
+ }
+
+ .buttonSectionOm>button {
+  padding: 0.5rem;
+  margin: 0.5rem;
+  width: 40vw;
+  font-size: 1.1rem;
+ }
+}

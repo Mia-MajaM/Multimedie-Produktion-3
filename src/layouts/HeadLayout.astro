@@ -1,0 +1,56 @@
+---
+// import af components
+import Footer from "../components/Footer.astro";
+import NavDesk from "../components/NavDesk.astro";
+import NavMobile from "../components/NavMobile.astro";
+
+// Import af globalt stylesheet, med styling af tekst
+import "../styles/global.css"
+
+// Lader os indsætte titlen og description på de forskellige sider. 
+// Sætter en default, til hvis der ikke er defineret på siderne.
+const {title = "Kjølbye Psykoterapi i Hjørring", 
+description = "Kjølbye Psykoterapi i Hjørring hjælper dig og dine pårørende med at arbejde med udfordringer, der præger din hverdag. Vores ventetid er lige nu på 1-2 uger."} = Astro.props;
+---
+
+<html lang="da">
+	<head>
+		<meta charset="utf-8" />
+
+  <!-- Indsættelse af FavIcon  -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- Indsættelse af Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+		<!-- Indsættelse af FontAwesome Kit -->
+		<script src="https://kit.fontawesome.com/6e4afa4845.js" crossorigin="anonymous"></script>
+
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- Indsættelse af description -->
+  <meta name="description" content={description}>
+
+		<!-- Indsættelse af title -->
+		<title>{title}</title>
+	</head>
+
+
+	<body>
+		<!-- Indsættelse af Navigation afhængig af mobil størrelse-->
+		<NavDesk/>
+		<NavMobile/>
+  
+
+		<!-- I slot, her bliver vores sider indsat -->
+		<slot/>
+
+		<!-- Indsættelse af Footer -->
+  <Footer/>
+	</body>
+</html>
+
+

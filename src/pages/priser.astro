@@ -1,0 +1,66 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro";
+
+import TogglePriser from "../components/Priser/TogglePriser.vue";
+import FocusPointsComp from "../components/FocusPointsComp.vue";
+
+import PriserAnneKirstine from "../components/Priser/Pris/PriserAnneKirstineComp.vue";
+import PriserKatharina from "../components/Priser/Pris/PriserKatharinaComp.vue";
+import PriserMorten from "../components/Priser/Pris/PriserMortenComp.vue";
+import Afbud from "../components/Priser/Pris/AfbudComp.vue";
+import Gruppe2 from "../components/Priser/Pris/Gruppe2Comp.vue";
+import Betaling from "../components/Priser/Pris/BetalingComp.vue";
+
+// Import stylesheet
+import "../styles/localNavAccordion.css"
+
+---
+
+
+<HeadLayout title="Kjølbye Psykoterapi - Priser" description="Priser - Her finder du prislisten for Kjølbye Psykoterapi -  Anne-Kirstine Kiil Kjølbye, Katharina Kjølbye Wrist og Morten Kjølbye.">
+	<h1>Priser</h1> 
+
+		<section class="twoColumns desktopVersion">
+			<section class="priser">
+				<PriserAnneKirstine/>
+				<PriserKatharina/>
+				<PriserMorten/>
+			</section>
+			<section>
+				<Afbud/>
+				<Gruppe2/>
+				<Betaling/>
+			</section>
+		</section>
+		<section class="mobileVersion">
+			<TogglePriser client:load/>
+</section>
+<FocusPointsComp client:visible/>
+</HeadLayout>
+
+<style>
+h1{
+ text-align: center;
+		margin: 3rem;
+	}
+h2{
+ margin: 2rem 0rem;
+}
+
+	.twoColumns{
+		gap: 4rem;
+		margin: 0rem 8rem;
+	}
+	.priser{
+		background: var(--baggrundsgul);
+		border-radius: 50px;
+	}
+
+	
+@media only screen and (max-width: 391px) {
+	h1{
+		margin: 2rem;
+		margin-bottom: 1rem;
+	}
+}
+</style>

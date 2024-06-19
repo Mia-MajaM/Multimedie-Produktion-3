@@ -1,0 +1,33 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro";
+import FocusPointsComp from "../components/FocusPointsComp.vue";
+
+import InformationComp from "../components/Information/InformationComp.vue";
+
+// Import af style til local navigation
+import "../styles/localNavScroll.css"
+---
+
+
+<HeadLayout title="Kjølbye Psykoterapi - Information" description="Kjølbye Psykoterapi hjælper med psykoterapi, stresssamtaler, ungesamtaler, egen terapi, gruppeterapi, supervision, undervisning og parterapi i Nordjylland.">
+	<!-- knap der skifter mellem layouts -->
+	<section>
+		<InformationComp client:load/>
+			<FocusPointsComp client:load/>
+	</section>
+</HeadLayout>
+
+<style>
+	a{
+    color: var(--mørkeBlå);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+a:hover{
+    color: var(--bordeaux);
+}
+</style>

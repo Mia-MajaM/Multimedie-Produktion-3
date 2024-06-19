@@ -1,0 +1,42 @@
+export default [
+ {
+  id: 1,
+  name: "Læs Om os",
+  imgSrc: "/FP_OmOs.png",
+  ariaLabel: "Knap der leder til Om os siden",
+  alt: "Billede af Om os siden",
+  linkTo: "/omos",
+ },
+ {
+  id: 2,
+  name: "Se Priser",
+  imgSrc: "/FP_Priser.png",
+  ariaLabel: "Knap der leder til Priser siden",
+  alt: "Billede af Priser siden",
+  linkTo: "/priser",
+ },
+ {
+  id: 3,
+  name: "Vi tilbyder",
+  imgSrc: "/FP_ViTilbyder.png",
+  ariaLabel: "Knap der leder til Vi tilbyder siden",
+  alt: "Billede af Vi tilbyder siden",
+  linkTo: "/vitilbyder",
+ },
+ {
+  id: 4,
+  name: "Få Information",
+  imgSrc: "/FP_Information.png",
+  ariaLabel: "Knap der leder til information siden",
+  alt: "Billede af information siden",
+  linkTo: "/information",
+ },
+ {
+  id: 5,
+  name: "Se Selvhjælp",
+  imgSrc: "/FP_Selvhjalp.png",
+  ariaLabel: "Knap der leder til selvhjælp siden",
+  alt: "Billede af selvhjælp siden",
+  linkTo: "/selvhjaelp",
+ },
+]

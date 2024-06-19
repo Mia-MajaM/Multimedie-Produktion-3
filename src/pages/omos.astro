@@ -1,0 +1,83 @@
+---
+import HeadLayout from "../layouts/HeadLayout.astro"
+import HvemErViCards from "../components/OmOs/HvemErViCardsComp.vue"
+import OmOsMobileComp from "../components/OmOs/OmOsMobileComp.vue"
+import FocusPointsComp from "../components/FocusPointsComp.vue";
+
+// Import stylesheet
+import "../styles/localNavOverlay.css"
+
+---
+
+
+<HeadLayout title="Kjølbye Psykoterapi - Om Os" description="Kjølbye Psykoterapi hjælper med psykoterapi, stresssamtaler, ungesamtaler, egen terapi, gruppeterapi, supervision, undervisning og parterapi i Nordjylland.">
+	<section class="flexSection">
+		<h1>Hvem er vi?</h1>
+ <p>Kjølbye Psykoterapi blev etableret i 2022.
+<br><br>
+		Vi brænder for at hjælpe netop dig/jer!
+		<br><br>
+		Med vores forskelligartet erfaringer har vi en bred vifte af områder hvor vi kan yde terapi, undervisning, sparring, supervision og rådgivning. Læs meget mere her på siden under de forskellige tilbud.
+		<br><br>
+		Kontakt os endelig for et uforpligtende tilbud. Vi står altid klar til at tilpasse et forløb specielt til dit/jeres behov.</p>
+	</section>
+<section class="desktopVersion">
+<HvemErViCards client:load/>
+</section>
+<section class="mobileVersion">
+<OmOsMobileComp client:load/>
+<div class="buttonSmallSection">
+	<button class="smallBtn">
+			<a href="/priser">Priser</a>
+	</button>
+	<button class="smallBtn">
+			<a href="/vitilbyder">Vi tilbyder</a>
+	</button>
+		</div>
+</section>
+<FocusPointsComp client:visible/>
+</HeadLayout>
+
+
+<style>
+.flexSection{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	h1{
+		text-align: center;
+		margin: 3rem;
+	}
+	ul{
+    padding-left: 2rem;
+  }
+
+	@media only screen and (max-width: 391px) {
+		.flexSection{
+			padding: 0rem 2rem;
+		}
+		
+		.buttonSmallSection{
+  display: flex;
+  justify-content: center;
+}
+		.smallBtn{
+ padding: 1rem;
+ margin: 1.6rem;
+ width: 40vw;
+ text-align: center;
+ font-size: 1.1rem;
+ background: var(--bordeaux);
+ color: var(--hvid);
+ border-radius: 40px;
+ cursor: pointer;
+} 
+
+.smallBtn>a{
+	all: unset;
+}
+
+	}
+	
+</style>

@@ -1,0 +1,81 @@
+---
+// import af component
+import BookButtonComp from "./BookButtonComp.vue";
+
+// Import af style
+import "../styles/global.css";
+---
+
+<nav>
+  <div class="navbar"> 
+  <a href="/" aria-label="Gå til hjem"> <img class="logo" src="/kjoelbye-psykoterapi-weblogo.jpg" alt="billede af Kjølbye Psykoterapi logo"></a>
+  <ul class="navLinks">
+    <li><a href="/">Hjem</a></li>
+    <li><a href="/omos">Om os</a></li>
+    <li><a href="/priser">Priser</a></li>
+    <li><a href="/vitilbyder">Vi tilbyder</a></li>
+    <li><a href="/information">Information</a></li>
+    <li><a href="/selvhjaelp">Selvhjælp</a></li>
+  </ul>
+</div>
+
+<BookButtonComp client:load/>
+</nav>
+
+<style>
+  nav{
+    position: sticky;
+    top: 0;
+    z-index: 99;
+  }
+  
+  .logo{
+    height: 60px;
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 8rem; 
+    background: var(--hvid);
+    border-bottom: 3px solid var(--mørkBordeaux);
+    filter: drop-shadow(0 0 0.25rem var(--sort));
+  }
+  .navbar ul{
+    display: flex;
+    list-style: none;
+  }
+
+  .navbar li{
+    padding-left: 4rem;
+  }
+ a{
+  all: unset;
+  cursor: pointer;
+  font-weight: 500;
+ }
+ 
+ .active, a:hover{
+   color: var(--mørkBordeaux);
+   font-weight: 600;
+  }  
+  @media only screen and (max-width: 391px) {
+    .navbar{
+      display: none;
+    }
+  }
+
+ </style>
+ 
+ 
+ <script>
+  const nav = document.querySelector(".navLinks");
+  const navLinks = nav.querySelectorAll("a");
+  const currentURL = window.location.href;
+  navLinks.forEach((link) => {
+   // for hver element i navLinks, laver vi et if tjek på om det matcher den nuværende url, hvis den gør skal classen active tilføjes
+   if(link.href === currentURL){
+    link.classList.add("active");
+   }
+  });
+ </script>
